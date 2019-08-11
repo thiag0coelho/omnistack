@@ -16,4 +16,8 @@ routes.post("/devs/:devId/dislikes", async (req, res) => {
   return await DislikeController.store(req, res);
 });
 
+routes.get("/devs", async (req, res) => {
+  return await DevController.index(req, res);
+});
+
 module.exports = routes;
